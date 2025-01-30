@@ -112,7 +112,7 @@
     <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
         <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Gestión de Operaciones Financieras</a></li>
-        <li><a href="#proyecto2" class="proyecto-btn">Proyecto 2</a></li>
+        <li><a href="#proceso-calyps" class="proyecto-btn">Revisión de Tipos Calypso-Refinitiv</a></li>
         <li><a href="#proyecto3" class="proyecto-btn">Proyecto 3</a></li>
     </ul>
 </section>
@@ -215,10 +215,44 @@
 
 
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
-<section id="proyecto2">
-    <h3>Proyecto 2</h3>
-    <p>Descripción del Proyecto 2...</p>
+<section id="proceso-calypso">
+    <h3>Proceso de Actualización de Tipos de Cambio e Interés</h3>
+    <p>Este proceso tiene como objetivo garantizar que los tipos de cambio e interés en el sistema Calypso estén actualizados con los últimos valores disponibles. A continuación, se describe el flujo de trabajo detallado de este automatismo:</p>
+
+    <h4>1. Ingreso a Calypso y Revisión de Tipos de Cambio e Interés</h4>
+    <p>El proceso comienza con el acceso al sistema Calypso para revisar los tipos de cambio y de interés registrados. El programa verifica si los valores cargados están actualizados, comparando las fechas de los últimos datos con la fecha del último día hábil.</p>
+    <p>Si algún tipo de cambio o interés tiene una fecha de actualización anterior al último día hábil, el tipo se agrega a una lista para ser actualizado.</p>
+
+    <h4>2. Ingreso a Refinitiv</h4>
+    <p>A continuación, el automatismo ingresa al sistema Refinitiv utilizando las credenciales correspondientes. Refinitiv se consulta para obtener los tipos de cambio e interés que faltan en Calypso.</p>
+
+    <h4>3. Búsqueda de Tipos de Cambio en Refinitiv</h4>
+    <p>Una vez dentro de Refinitiv, se realiza una búsqueda para cada tipo de cambio o tipo de interés que falta en Calypso. Si Refinitiv proporciona los datos, el proceso continúa con la creación del archivo XML.</p>
+
+    <h4>4. Creación de Archivos XML</h4>
+    <p>Si Refinitiv proporciona la información actualizada, el programa genera un archivo <strong>XML</strong> para cada tipo de cambio o tipo de interés que falta en Calypso. Estos archivos contienen la información necesaria para actualizar los datos en el sistema Calypso.</p>
+
+    <h4>5. Carga de los Archivos XML a Alveo</h4>
+    <p>Una vez que todos los archivos XML necesarios han sido creados, el automatismo los carga en el sistema Alveo utilizando un proceso de transferencia de archivos seguro a través de un MFT (Managed File Transfer).</p>
+
+    <h4>6. Recuperación de los Archivos XML desde Alveo</h4>
+    <p>El siguiente paso es ingresar a Alveo para recuperar los archivos XML previamente cargados. Estos archivos contienen los datos actualizados para los tipos de cambio e interés que necesitan ser incorporados en Calypso.</p>
+
+    <h4>7. Lanzamiento de los Datos a Calypso</h4>
+    <p>Una vez recuperados los archivos XML desde Alveo, el automatismo ejecuta el lanzamiento de los datos en el sistema Calypso, actualizando los tipos de cambio e interés con la información más reciente disponible.</p>
+
+    <h4>8. Revisión Final en Calypso</h4>
+    <p>Finalmente, el proceso revisa si Calypso ya ha sido actualizado con los nuevos tipos de cambio e interés. Si es necesario, el proceso se repite para asegurar que todos los datos estén correctamente cargados y actualizados.</p>
+
+    <h4>Beneficios del Automatismo</h4>
+    <ul>
+        <li><strong>Eficiencia:</strong> El proceso se ejecuta de manera automática, sin intervención manual, asegurando una actualización constante de los datos sin esfuerzo adicional.</li>
+        <li><strong>Precisión:</strong> Los datos se actualizan con la información más reciente de manera precisa, sin riesgo de error humano.</li>
+        <li><strong>Ahorro de Tiempo:</strong> Este proceso automatizado elimina la necesidad de realizar tareas manuales repetitivas, permitiendo que los recursos humanos se enfoquen en tareas más estratégicas.</li>
+        <li><strong>Cumplimiento de Normativas:</strong> El proceso garantiza que los tipos de cambio e interés estén siempre actualizados en el sistema Calypso, cumpliendo con las normativas internas y regulatorias.</li>
+    </ul>
 </section>
+
 
 <section id="proyecto3">
     <h3>Proyecto 3</h3>

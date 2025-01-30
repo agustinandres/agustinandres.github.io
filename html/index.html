@@ -3,36 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Documentación</title>
+    <title>Mi Página Personal</title>
     <style>
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #007BFF; /* Fondo azul */
             color: #333;
         }
+
+        /* Estilo del encabezado */
         header {
-            background-color: #4CAF50;
+            background-color: #004085; /* Azul oscuro */
             color: white;
-            padding: 10px 0;
+            padding: 20px;
             text-align: center;
         }
-        main {
-            padding: 20px;
-        }
-        a {
-            color: #4CAF50;
+
+        /* Estilo de los botones del encabezado */
+        header nav a {
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #0056b3;
+            border-radius: 5px;
             font-weight: bold;
         }
-        a:hover {
-            text-decoration: underline;
+
+        header nav a:hover {
+            background-color: #003366;
         }
+
+        /* Estilo de las secciones */
+        section {
+            margin: 40px auto;
+            width: 80%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        /* Estilo del pie de página */
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #004085;
             color: white;
             position: fixed;
             bottom: 0;
@@ -43,21 +69,39 @@
 <body>
 
 <header>
-    <h1>Documentación</h1>
+    <h1>Mi Página Personal</h1>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 </header>
 
-<main>
-    <h2>Enlaces útiles:</h2>
+<!-- Sección "Sobre mí" -->
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Hola, soy [Tu Nombre], un apasionado de la tecnología y la programación. Me encanta aprender nuevas habilidades y trabajar en proyectos interesantes. Siempre estoy buscando nuevas oportunidades para crecer y mejorar en mi carrera profesional.</p>
+</section>
+
+<!-- Sección "Proyectos" -->
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Aquí puedes ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
-        <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">Documentación HTML - MDN</a></li>
-        <li><a href="https://www.w3schools.com/html/" target="_blank">Tutoriales HTML - W3Schools</a></li>
-        <li><a href="https://www.git-scm.com/doc" target="_blank">Documentación de Git</a></li>
-        <li><a href="https://github.com/docs" target="_blank">Documentación de GitHub</a></li>
+        <li>Proyecto 1: Descripción breve del proyecto.</li>
+        <li>Proyecto 2: Descripción breve del proyecto.</li>
+        <li>Proyecto 3: Descripción breve del proyecto.</li>
     </ul>
-</main>
+</section>
+
+<!-- Sección "Contacto" -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si deseas contactarme, puedes enviarme un correo a: <a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a></p>
+</section>
 
 <footer>
-    <p>&copy; 2025 Mi Sitio de Documentación</p>
+    <p>&copy; 2025 Mi Página Personal</p>
 </footer>
 
 </body>

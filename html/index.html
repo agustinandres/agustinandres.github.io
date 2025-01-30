@@ -100,6 +100,7 @@
 
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
+<!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <section id="gestion-operaciones-financieras">
     <h3>Gestión de Operaciones Financieras</h3>
     <p>Este automatismo tiene como objetivo optimizar el proceso de monitoreo y registro de operaciones de compra y venta de acciones, utilizando las notificaciones enviadas por los bancos a través de su servicio de correo electrónico (Outlook). El flujo de trabajo del automatismo está diseñado para operar de manera autónoma, realizar cálculos de rendimiento financiero y cumplir con las normativas de reporte de la CNMV (Comisión Nacional del Mercado de Valores). A continuación, se describe el funcionamiento detallado del proceso:</p>
@@ -115,9 +116,9 @@
     <h4>2. Extracción de Datos de las Notificaciones</h4>
     <p>Cuando el programa encuentra un correo de un banco, se encarga de extraer los datos relevantes de la transacción, que pueden estar en uno de los tres formatos mencionados anteriormente (PDF, Excel o cuerpo del correo). Dependiendo del formato, el programa implementa diferentes técnicas de extracción de datos:</p>
     <ul>
-        <li>Para los <strong>archivos PDF</strong>, se utiliza un lector OCR (Reconocimiento Óptico de Caracteres) para identificar y extraer los datos.</li>
-        <li>Para los <strong>archivos Excel</strong>, el programa lee directamente las celdas correspondientes.</li>
-        <li>Para los datos en el <strong>cuerpo del correo electrónico</strong>, el programa analiza el texto para identificar las transacciones.</li>
+        <li><strong>Para los <em>archivos PDF</em></strong>, el programa utiliza una combinación de un lector OCR (Reconocimiento Óptico de Caracteres) y expresiones regulares. El OCR permite convertir el texto de las imágenes o documentos escaneados a texto legible, mientras que las expresiones regulares se usan para identificar patrones específicos en el texto (como números de operaciones, fechas, etc.), lo que facilita la extracción precisa de los datos.</li>
+        <li><strong>Para los <em>archivos Excel</em></strong>, el programa no depende de un formato fijo. En su lugar, aplica una lógica flexible para buscar celdas clave en cualquier parte del archivo, lo que permite que el sistema se adapte a variaciones en el formato del archivo (por ejemplo, si los bancos cambian la disposición de las columnas o filas). Esta flexibilidad asegura que el automatismo siga funcionando incluso si los bancos modifican sus plantillas de Excel.</li>
+        <li><strong>Para los datos en el <em>cuerpo del correo electrónico</em></strong>, el programa emplea técnicas como BeautifulSoup para analizar las tablas HTML dentro del cuerpo del correo y extraer los datos de manera estructurada. BeautifulSoup es una biblioteca que permite extraer información de documentos HTML de manera eficiente, interpretando la estructura del código HTML y extrayendo las tablas de manera precisa. Además, también se utilizan expresiones regulares para buscar patrones de texto específicos que puedan no estar en formato tabular, lo que permite una extracción más completa de la información.</li>
     </ul>
 
     <h4>3. Carga de los Datos en un Excel de Registro</h4>
@@ -154,6 +155,7 @@
         <li><strong>Ahorro de Tiempo</strong>: Al automatizar este proceso, se ahorran cientos de horas de trabajo manual, permitiendo que los analistas financieros se concentren en tareas más estratégicas.</li>
     </ul>
 </section>
+
 
 
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->

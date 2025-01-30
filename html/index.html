@@ -88,18 +88,85 @@
 </section>
 
 
-<!-- Sección "Proyectos" -->
 <section id="proyectos">
     <h2>Proyectos</h2>
-    <p>Aquí puedes ver algunos de los proyectos en los que he trabajado:</p>
+    <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
-        <li>Proyecto 1: Descripción breve del proyecto.</li>
-        <li>Proyecto 2: Descripción breve del proyecto.</li>
-        <li>Proyecto 3: Descripción breve del proyecto.</li>
+        <li><a href="#gestion-operaciones-financieras">Gestión de Operaciones Financieras</a></li>
+        <li><a href="#proyecto2">Proyecto 2</a></li>
+        <li><a href="#proyecto3">Proyecto 3</a></li>
+    </ul>
+</section>
+
+<!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
+<!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
+<section id="gestion-operaciones-financieras">
+    <h3>Gestión de Operaciones Financieras</h3>
+    <p>Este automatismo tiene como objetivo optimizar el proceso de monitoreo y registro de operaciones de compra y venta de acciones, utilizando las notificaciones enviadas por los bancos a través de su servicio de correo electrónico (Outlook). El flujo de trabajo del automatismo está diseñado para operar de manera autónoma, realizar cálculos de rendimiento financiero y cumplir con las normativas de reporte de la CNMV (Comisión Nacional del Mercado de Valores). A continuación, se describe el funcionamiento detallado del proceso:</p>
+    
+    <h4>1. Lectura Diaria del Buzón de Outlook</h4>
+    <p>Todos los días, el programa accede al buzón de Outlook en busca de correos electrónicos que provengan de los bancos. Estos correos contienen las confirmaciones de operaciones realizadas sobre la compra y venta de acciones. Las notificaciones pueden llegar en distintos formatos:</p>
+    <ul>
+        <li><strong>PDF</strong></li>
+        <li><strong>Excel</strong></li>
+        <li><strong>Cuerpo del correo electrónico</strong></li>
+    </ul>
+
+    <h4>2. Extracción de Datos de las Notificaciones</h4>
+    <p>Cuando el programa encuentra un correo de un banco, se encarga de extraer los datos relevantes de la transacción, que pueden estar en uno de los tres formatos mencionados anteriormente (PDF, Excel o cuerpo del correo). Dependiendo del formato, el programa implementa diferentes técnicas de extracción de datos:</p>
+    <ul>
+        <li>Para los <strong>archivos PDF</strong>, se utiliza un lector OCR (Reconocimiento Óptico de Caracteres) para identificar y extraer los datos.</li>
+        <li>Para los <strong>archivos Excel</strong>, el programa lee directamente las celdas correspondientes.</li>
+        <li>Para los datos en el <strong>cuerpo del correo electrónico</strong>, el programa analiza el texto para identificar las transacciones.</li>
+    </ul>
+
+    <h4>3. Carga de los Datos en un Excel de Registro</h4>
+    <p>Una vez que el programa ha extraído los datos de la operación, los registra en un archivo Excel. Este archivo actúa como el registro central de todas las transacciones realizadas, y el programa organiza los datos en columnas correspondientes, tales como:</p>
+    <ul>
+        <li>Fecha de la operación</li>
+        <li>Banco</li>
+        <li>Tipo de operación (compra/venta)</li>
+        <li>Número de acciones</li>
+        <li>Precio de la acción</li>
+        <li>Total de la operación</li>
+        <li>Otros detalles relevantes</li>
+    </ul>
+
+    <h4>4. Cálculos Financieros Automáticos</h4>
+    <p>El programa realiza una serie de cálculos sobre los datos extraídos y registrados:</p>
+    <ul>
+        <li><strong>Cartera Actual Post Operaciones</strong>: Calcula el valor de la cartera después de cada operación, actualizando el número de acciones y el valor total.</li>
+        <li><strong>Rendimiento Obtenido</strong>: Calcula el rendimiento generado por las operaciones, comparando el precio de compra y venta de las acciones.</li>
+        <li><strong>% de Capital Social en Autocartera</strong>: Calcula el porcentaje de acciones que la empresa tiene en autocartera, con respecto al total de acciones en circulación.</li>
+    </ul>
+
+    <h4>5. Generación del XML para Reporte a la CNMV</h4>
+    <p>Si el <strong>% de capital social en autocartera</strong> excede un umbral predefinido (por ejemplo, el 5%), el programa genera automáticamente un archivo <strong>XML</strong> que contiene un histórico de todas las operaciones realizadas desde la última vez que se generó el XML. Este archivo XML tiene un formato estandarizado y contiene la información necesaria para cumplir con los requisitos de la CNMV.</p>
+
+    <h4>6. Carga del XML en la Web de la CNMV</h4>
+    <p>Una vez generado el XML, el automatismo accede a la página web de la CNMV e ingresa a la sección correspondiente para cargar el archivo XML. El proceso se realiza de manera automática, sin intervención manual, asegurando que el reporte sea presentado dentro de los plazos establecidos.</p>
+
+    <h4>Beneficios del Automatismo</h4>
+    <ul>
+        <li><strong>Eficiencia</strong>: El programa ejecuta el proceso de forma automática todos los días, eliminando la necesidad de intervención manual.</li>
+        <li><strong>Precisión</strong>: La extracción de datos y los cálculos financieros se realizan de manera precisa, sin riesgo de error humano.</li>
+        <li><strong>Cumplimiento Normativo</strong>: El automatismo asegura que las operaciones se reporten correctamente a la CNMV en los plazos establecidos, cumpliendo con las normativas vigentes.</li>
+        <li><strong>Ahorro de Tiempo</strong>: Al automatizar este proceso, se ahorran cientos de horas de trabajo manual, permitiendo que los analistas financieros se concentren en tareas más estratégicas.</li>
     </ul>
 </section>
 
 
+<!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
+<section id="proyecto2">
+    <h3>Proyecto 2</h3>
+    <p>Descripción del Proyecto 2...</p>
+</section>
+
+<section id="proyecto3">
+    <h3>Proyecto 3</h3>
+    <p>Descripción del Proyecto 3...</p>
+</section>
+    
 <footer>
     <p>&copy; Agustín Andrés 2025</p>
 </footer>

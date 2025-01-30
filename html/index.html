@@ -99,7 +99,8 @@
     </ul>
 </section>
 <style>
-    .proyecto-btn {
+    /* Estilo solo para los enlaces dentro de la sección "proyectos" */
+    #proyectos .proyecto-btn {
         display: inline-block;
         background-color: #007BFF; /* Fondo azul */
         color: white; /* Letra blanca */
@@ -111,19 +112,19 @@
         transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
     }
 
-    .proyecto-btn:hover {
+    #proyectos .proyecto-btn:hover {
         background-color: white; /* Fondo blanco cuando pasa el mouse */
         color: #007BFF; /* Letra azul cuando pasa el mouse */
         cursor: pointer; /* Aparece el cursor de mano */
     }
 
-    /* Estilos para los enlaces dentro de la lista */
-    ul {
+    /* Estilos para los enlaces dentro de la lista (solo en la sección "proyectos") */
+    #proyectos ul {
         list-style: none; /* Quitar los puntos de la lista */
         padding: 0;
     }
 
-    ul li {
+    #proyectos ul li {
         margin-bottom: 10px; /* Espaciado entre elementos de la lista */
     }
 </style>

@@ -85,13 +85,7 @@
         header nav {
             margin-top: 20px; /* Aseguramos que haya más espacio entre el título y los botones */
         }
-
-        .hidden {
-    display: none;
-}
     </style>
-
-
 </head>
 <body>
 
@@ -114,18 +108,13 @@
 
 
 <section id="proyectos">
-    <h2 class="proyectos-title">Proyectos</h2>
+        <h2 class="proyectos-title">Proyectos</h2>
     <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
-        <li>
-            <a href="javascript:void(0);" onclick="toggleSection('gestion-operaciones-financieras', this)" class="proyecto-btn">Gestión de Operaciones Financieras</a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" onclick="toggleSection('proceso-calypso', this)" class="proyecto-btn">Control de Tipos Calypso-Refinitiv</a>
-        </li>
+        <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Gestión de Operaciones Financieras</a></li>
+        <li><a href="#proceso-calypso" class="proyecto-btn">Control de Tipos Calypso-Refinitiv</a></li>
     </ul>
 </section>
-    
 <style>
     /* Estilo solo para los enlaces dentro de la sección "proyectos" */
     #proyectos .proyecto-btn {
@@ -166,8 +155,7 @@
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
-    
-<div id="gestion-operaciones-financieras" class="proyecto-section">
+<section id="gestion-operaciones-financieras">
     <h3>Gestión de Operaciones Financieras</h3>
     <p>Este automatismo tiene como objetivo optimizar el proceso de monitoreo y registro de operaciones de compra y venta de acciones, utilizando las notificaciones enviadas por los bancos a través de su servicio de correo electrónico (Outlook). El flujo de trabajo del automatismo está diseñado para operar de manera autónoma, realizar cálculos de rendimiento financiero y cumplir con las normativas de reporte de la CNMV (Comisión Nacional del Mercado de Valores). A continuación, se describe el funcionamiento detallado del proceso:</p>
     
@@ -221,12 +209,12 @@
         <li><strong>Cumplimiento Normativo</strong>: El automatismo asegura que las operaciones se reporten correctamente a la CNMV en los plazos establecidos, cumpliendo con las normativas vigentes.</li>
         <li><strong>Ahorro de Tiempo</strong>: Al automatizar este proceso, se ahorran cientos de horas de trabajo manual, permitiendo que los analistas financieros se concentren en tareas más estratégicas.</li>
     </ul>
-</div>
+</section>
 
 
 
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
-<div id="proceso-calypso" class="proyecto-section">
+<section id="proceso-calypso">
     <h3>Control de Tipos Calypso-Refinitiv</h3>
     <p>Este automatismo tiene como objetivo garantizar que la base de datos en el sistema Calypso cuente siempre con la información de mercado actualizada, especialmente en lo que respecta a los tipos de cambio e interés. Al automatizar este proceso, se asegura que los datos cruciales para la toma de decisiones financieras estén siempre al día, reduciendo el riesgo de utilizar información desactualizada y mejorando la eficiencia operativa en la empresa. A continuación, se describe el flujo de trabajo detallado del automatismo:</p>
 
@@ -265,32 +253,24 @@
     </ul>
 
     <p>Con este sistema automatizado, se garantiza que la actualización de tipos de cambio e interés sea rápida, precisa y sin intervención manual, permitiendo a la empresa mantenerse competitiva y alineada con los estándares más exigentes.</p>
-</div>
+</section>
 
 
 
-
+<section id="proyecto3">
+    <h3>Proyecto 3</h3>
+    <p>Descripción del Proyecto 3...</p>
+</section>
     
 <footer>
     <p>&copy; Agustín Andrés 2025</p>
 </footer>
 
-
-<script>
-    function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        if (section) {
-            if (section.classList.contains("hidden")) {
-                section.classList.remove("hidden");
-            } else {
-                section.classList.add("hidden");
-            }
-        }
-    }
-</script>
 </body>
 </html>
 
 </body>
+</html>
+
 
 </html>

@@ -231,14 +231,14 @@
     <h4>4. Creación de Archivos XML</h4>
     <p>Una vez que Refinitiv proporciona los datos necesarios, el programa genera automáticamente archivos <strong>XML</strong> con la información de los tipos de cambio e interés. Estos archivos están listos para ser cargados, sin necesidad de intervención manual.</p>
 
-    <h4>5. Carga de los Archivos XML a Alveo</h4>
-    <p>Los archivos XML generados se cargan de manera automática utilizando en la plataforma de MFT (Managed File Transfer) utilizando técnicas robustas de <strong>web scraping</strong> para interactuar con las interfaces web de la plataforma de MFT, garantizando que los archivos se carguen correctamente y de manera confiable, sin intervención manual.</p>
+    <h4>5. Carga Automática de los Archivos XML en MFT</h4>
+    <p>Los archivos XML generados se cargan de manera automática utilizando la plataforma de MFT (Managed File Transfer) utilizando técnicas robustas de <strong>web scraping</strong> para interactuar con las interfaces web de la plataforma del MFT, garantizando que los archivos se carguen correctamente y de manera confiable, sin intervención manual.</p>
 
     <h4>6. Recuperación de los Archivos XML desde Alveo</h4>
-    <p>Una vez cargados en Alveo, el automatismo accede al sistema para recuperar los archivos XML con los datos actualizados, asegurando que la información que se llevará a Calypso esté completamente alineada con las últimas fuentes de datos.</p>
+    <p>Una vez enviados los XML desde el MFT, el sistema ingresa al sistema Alveo y busca los archivos XML en la ruta específica donde el MFT los ha dejado para realizar la carga de los datos presentes en esos archivos XML, asegurándose de que toda la información esté disponible para la siguiente fase del proceso.</p>
 
     <h4>7. Lanzamiento de los Datos a Calypso</h4>
-    <p>Con los datos recuperados desde Alveo, el automatismo realiza el lanzamiento de la información directamente en el sistema Calypso, actualizando los tipos de cambio e interés de forma completamente automática.</p>
+    <p>Con los datos cargados en Alveo, el automatismo realiza el lanzamiento de la información de Alveo a Calypso, actualizando los tipos de cambio e interés de forma completamente automática.</p>
 
     <h4>8. Revisión Final en Calypso</h4>
     <p>Finalmente, el proceso revisa en Calypso si los datos han sido correctamente actualizados. Esto asegura que no haya discrepancias y que los sistemas siempre estén listos para las operaciones, con datos precisos y actualizados.</p>

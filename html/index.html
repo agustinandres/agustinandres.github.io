@@ -85,7 +85,24 @@
         header nav {
             margin-top: 20px; /* Aseguramos que haya más espacio entre el título y los botones */
         }
+
+        .hidden {
+    display: none;
+}
     </style>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section.classList.contains('hidden')) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -108,13 +125,14 @@
 
 
 <section id="proyectos">
-        <h2 class="proyectos-title">Proyectos</h2>
+    <h2 class="proyectos-title">Proyectos</h2>
     <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
-        <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Gestión de Operaciones Financieras</a></li>
-        <li><a href="#proceso-calypso" class="proyecto-btn">Control de Tipos Calypso-Refinitiv</a></li>
+        <li><a href="javascript:void(0)" class="proyecto-btn" onclick="toggleSection('gestion-operaciones-financieras')">Gestión de Operaciones Financieras</a></li>
+        <li><a href="javascript:void(0)" class="proyecto-btn" onclick="toggleSection('proceso-calypso')">Control de Tipos Calypso-Refinitiv</a></li>
     </ul>
 </section>
+    
 <style>
     /* Estilo solo para los enlaces dentro de la sección "proyectos" */
     #proyectos .proyecto-btn {
@@ -155,7 +173,7 @@
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
-<section id="gestion-operaciones-financieras">
+<section id="gestion-operaciones-financieras" class="hidden">
     <h3>Gestión de Operaciones Financieras</h3>
     <p>Este automatismo tiene como objetivo optimizar el proceso de monitoreo y registro de operaciones de compra y venta de acciones, utilizando las notificaciones enviadas por los bancos a través de su servicio de correo electrónico (Outlook). El flujo de trabajo del automatismo está diseñado para operar de manera autónoma, realizar cálculos de rendimiento financiero y cumplir con las normativas de reporte de la CNMV (Comisión Nacional del Mercado de Valores). A continuación, se describe el funcionamiento detallado del proceso:</p>
     
@@ -214,7 +232,7 @@
 
 
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
-<section id="proceso-calypso">
+<section id="proceso-calypso" class="hidden">
     <h3>Control de Tipos Calypso-Refinitiv</h3>
     <p>Este automatismo tiene como objetivo garantizar que la base de datos en el sistema Calypso cuente siempre con la información de mercado actualizada, especialmente en lo que respecta a los tipos de cambio e interés. Al automatizar este proceso, se asegura que los datos cruciales para la toma de decisiones financieras estén siempre al día, reduciendo el riesgo de utilizar información desactualizada y mejorando la eficiencia operativa en la empresa. A continuación, se describe el flujo de trabajo detallado del automatismo:</p>
 
@@ -270,4 +288,5 @@
 </html>
 
 </body>
+
 </html>

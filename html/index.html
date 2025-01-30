@@ -91,18 +91,7 @@
 }
     </style>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function toggleSection(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (section.classList.contains('hidden')) {
-                    section.classList.remove('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
-            }
-        });
-    </script>
+
 </head>
 <body>
 
@@ -275,15 +264,25 @@
 
 
 
-<section id="proyecto3">
-    <h3>Proyecto 3</h3>
-    <p>Descripción del Proyecto 3...</p>
-</section>
+
     
 <footer>
     <p>&copy; Agustín Andrés 2025</p>
 </footer>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section.classList.contains('hidden')) {
+            section.classList.remove('hidden');
+        } else {
+            section.classList.add('hidden');
+        }
+    }
+});
+</script>
 </body>
 </html>
 

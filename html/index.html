@@ -112,7 +112,7 @@
     <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
     <ul>
         <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Gestión de Operaciones Financieras</a></li>
-        <li><a href="#proceso-calyps" class="proyecto-btn">Revisión de Tipos Calypso-Refinitiv</a></li>
+        <li><a href="#proceso-calypso" class="proyecto-btn">Revisión de Tipos Calypso-Refinitiv</a></li>
         <li><a href="#proyecto3" class="proyecto-btn">Proyecto 3</a></li>
     </ul>
 </section>
@@ -217,41 +217,45 @@
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
 <section id="proceso-calypso">
     <h3>Proceso de Actualización de Tipos de Cambio e Interés</h3>
-    <p>Este proceso tiene como objetivo garantizar que los tipos de cambio e interés en el sistema Calypso estén actualizados con los últimos valores disponibles. A continuación, se describe el flujo de trabajo detallado de este automatismo:</p>
+    <p>Este automatismo tiene como objetivo optimizar y agilizar la actualización de tipos de cambio e interés en el sistema Calypso, garantizando que siempre se cuente con los datos más actuales disponibles para la toma de decisiones financieras. Al automatizar este proceso, se eliminan los errores humanos, se reducen los tiempos de actualización y se asegura que la información crítica esté siempre alineada con los requerimientos regulatorios y operativos. A continuación, se describe el flujo de trabajo detallado del automatismo:</p>
 
     <h4>1. Ingreso a Calypso y Revisión de Tipos de Cambio e Interés</h4>
-    <p>El proceso comienza con el acceso al sistema Calypso para revisar los tipos de cambio y de interés registrados. El programa verifica si los valores cargados están actualizados, comparando las fechas de los últimos datos con la fecha del último día hábil.</p>
-    <p>Si algún tipo de cambio o interés tiene una fecha de actualización anterior al último día hábil, el tipo se agrega a una lista para ser actualizado.</p>
+    <p>El proceso comienza con el acceso al sistema Calypso, donde se revisan los tipos de cambio y de interés registrados. Si se encuentra algún dato con una fecha anterior al último día hábil, se agrega automáticamente a una lista de actualización, lo que garantiza que los valores estén siempre al día para las operaciones.</p>
 
     <h4>2. Ingreso a Refinitiv</h4>
-    <p>A continuación, el automatismo ingresa al sistema Refinitiv utilizando las credenciales correspondientes. Refinitiv se consulta para obtener los tipos de cambio e interés que faltan en Calypso.</p>
+    <p>El automatismo luego ingresa al sistema Refinitiv utilizando las credenciales correspondientes. Refinitiv proporciona una fuente confiable y precisa de información financiera global, que es consultada para obtener los datos faltantes.</p>
 
     <h4>3. Búsqueda de Tipos de Cambio en Refinitiv</h4>
-    <p>Una vez dentro de Refinitiv, se realiza una búsqueda para cada tipo de cambio o tipo de interés que falta en Calypso. Si Refinitiv proporciona los datos, el proceso continúa con la creación del archivo XML.</p>
+    <p>Con la información de tipos faltantes en Calypso, el automatismo realiza una búsqueda eficiente en Refinitiv para obtener los valores más actualizados. Este proceso se hace de manera ágil y autónoma, asegurando que no se pierda tiempo valioso en la recopilación de datos.</p>
 
     <h4>4. Creación de Archivos XML</h4>
-    <p>Si Refinitiv proporciona la información actualizada, el programa genera un archivo <strong>XML</strong> para cada tipo de cambio o tipo de interés que falta en Calypso. Estos archivos contienen la información necesaria para actualizar los datos en el sistema Calypso.</p>
+    <p>Una vez que Refinitiv proporciona los datos necesarios, el programa genera automáticamente archivos <strong>XML</strong> con la información de los tipos de cambio e interés. Estos archivos están listos para ser cargados en el sistema Calypso, sin necesidad de intervención manual.</p>
 
     <h4>5. Carga de los Archivos XML a Alveo</h4>
-    <p>Una vez que todos los archivos XML necesarios han sido creados, el automatismo los carga en el sistema Alveo utilizando un proceso de transferencia de archivos seguro a través de un MFT (Managed File Transfer).</p>
+    <p>Los archivos XML generados se cargan de manera segura y eficiente en el sistema Alveo utilizando un proceso de transferencia de archivos a través de MFT (Managed File Transfer), garantizando la integridad y seguridad de los datos durante todo el proceso.</p>
 
     <h4>6. Recuperación de los Archivos XML desde Alveo</h4>
-    <p>El siguiente paso es ingresar a Alveo para recuperar los archivos XML previamente cargados. Estos archivos contienen los datos actualizados para los tipos de cambio e interés que necesitan ser incorporados en Calypso.</p>
+    <p>Una vez cargados en Alveo, el automatismo accede al sistema para recuperar los archivos XML con los datos actualizados, asegurando que la información que se llevará a Calypso esté completamente alineada con las últimas fuentes de datos.</p>
 
     <h4>7. Lanzamiento de los Datos a Calypso</h4>
-    <p>Una vez recuperados los archivos XML desde Alveo, el automatismo ejecuta el lanzamiento de los datos en el sistema Calypso, actualizando los tipos de cambio e interés con la información más reciente disponible.</p>
+    <p>Con los datos recuperados desde Alveo, el automatismo realiza el lanzamiento de la información directamente en el sistema Calypso, actualizando los tipos de cambio e interés de forma completamente automática.</p>
 
     <h4>8. Revisión Final en Calypso</h4>
-    <p>Finalmente, el proceso revisa si Calypso ya ha sido actualizado con los nuevos tipos de cambio e interés. Si es necesario, el proceso se repite para asegurar que todos los datos estén correctamente cargados y actualizados.</p>
+    <p>Finalmente, el proceso revisa en Calypso si los datos han sido correctamente actualizados. Esto asegura que no haya discrepancias y que los sistemas siempre estén listos para las operaciones, con datos precisos y actualizados.</p>
 
     <h4>Beneficios del Automatismo</h4>
+    <p>Este proceso no solo asegura la precisión de los datos, sino que también ofrece una serie de beneficios adicionales para la empresa:</p>
     <ul>
-        <li><strong>Eficiencia:</strong> El proceso se ejecuta de manera automática, sin intervención manual, asegurando una actualización constante de los datos sin esfuerzo adicional.</li>
-        <li><strong>Precisión:</strong> Los datos se actualizan con la información más reciente de manera precisa, sin riesgo de error humano.</li>
-        <li><strong>Ahorro de Tiempo:</strong> Este proceso automatizado elimina la necesidad de realizar tareas manuales repetitivas, permitiendo que los recursos humanos se enfoquen en tareas más estratégicas.</li>
-        <li><strong>Cumplimiento de Normativas:</strong> El proceso garantiza que los tipos de cambio e interés estén siempre actualizados en el sistema Calypso, cumpliendo con las normativas internas y regulatorias.</li>
+        <li><strong>Eficiencia Operativa:</strong> La automatización de este proceso elimina la intervención manual y los posibles errores asociados, asegurando que las actualizaciones se realicen de manera precisa y en tiempo real.</li>
+        <li><strong>Reducción de Costos:</strong> Al eliminar las tareas manuales, el automatismo optimiza el uso de recursos, lo que lleva a un ahorro significativo en tiempo y esfuerzo. Las horas invertidas en tareas repetitivas y propensas a errores son ahora aprovechadas en actividades de mayor valor.</li>
+        <li><strong>Cumplimiento Regulatorio:</strong> El proceso asegura que todos los tipos de cambio e interés estén siempre actualizados y en línea con las normativas internas y regulatorias, reduciendo el riesgo de sanciones o errores en el reporte.</li>
+        <li><strong>Ahorro de Tiempo:</strong> Al automatizar tareas que antes requerían de intervención manual, el proceso se vuelve mucho más ágil, permitiendo que los equipos financieros se centren en tareas más estratégicas y de análisis de valor agregado.</li>
+        <li><strong>Escalabilidad:</strong> El automatismo está diseñado para adaptarse a futuras necesidades de actualización de datos, lo que permite escalar sin problemas en función de los requerimientos del negocio.</li>
     </ul>
+
+    <p>Con este sistema automatizado, se garantiza que la actualización de tipos de cambio e interés sea rápida, precisa y sin intervención manual, permitiendo a la empresa mantenerse competitiva y alineada con los estándares más exigentes.</p>
 </section>
+
 
 
 <section id="proyecto3">

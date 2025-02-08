@@ -103,17 +103,17 @@
     <p>I am passionate about optimizing and automating processes, always looking for new challenges that allow me to learn, grow, and apply my experience in innovative solutions. I have been involved in system development for over <strong>7 years</strong>, leading consultant teams and managing technology projects aimed at streamlining business operations. This experience has given me a comprehensive perspective, combining team management with the implementation of high-impact technological solutions.</p>
     <p>In the last <strong>2 years</strong>, I have specialized in <strong>RPA (Robotic Process Automation)</strong>, developing bots that automate repetitive and manual tasks. This specialization has enabled me to optimize business processes, reducing work time and improving operational efficiency. In fact, one of the most significant achievements of my career has been achieving a <strong>monthly savings of over 500 hours</strong> in just one year by automating various tasks. These results have not only increased the efficiency of the teams I have worked with but have also allowed resources to be focused on more strategic and high-value activities.</p>
     <p>Additionally, I have a <strong>strong background in finance</strong>, with a <strong>Master's degree in Finance</strong> and <strong>6 years of experience</strong> in financial departments of large companies. This education has given me a strategic and analytical vision that allows me to understand business challenges from a comprehensive perspective, which has been highly useful in applying technological solutions to solve problems in critical areas such as financial management and data-driven decision-making.</p>
-    <p>I firmly believe that <strong>automation</strong> and <strong>technological innovation</strong> are key to the future of productivity and business competitiveness. My goal is to continue developing solutions that optimize work and improve people's professional lives while contributing to the success and growth of the organizations I collaborate with.</p>
+    <p>I firmly believe that <strong>process reengineering</strong> and <strong>automation</strong> are key to the future of productivity and business competitiveness. My goal is to continue developing solutions that optimize work and improve people's professional lives while contributing to the success and growth of the organizations I collaborate with.</p>
 </section>
 
 
 
 <section id="proyectos">
-        <h2 class="proyectos-title">Proyectos</h2>
-    <p>A continuación se pueden ver algunos de los proyectos en los que he trabajado:</p>
+        <h2 class="proyectos-title">Projects</h2>
+    <p>Below are some of the projects I have worked on:</p>
     <ul>
-        <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Gestión de Operaciones Financieras</a></li>
-        <li><a href="#proceso-calypso" class="proyecto-btn">Control de Tipos Calypso-Refinitiv</a></li>
+        <li><a href="#gestion-operaciones-financieras" class="proyecto-btn">Financial Operations Management</a></li>
+        <li><a href="#proceso-calypso" class="proyecto-btn">Calypso-Refinitiv Rate Control</a></li>
     </ul>
 </section>
 <style>
@@ -157,103 +157,104 @@
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <!-- Detalle del proyecto "Gestión de Operaciones Financieras" -->
 <section id="gestion-operaciones-financieras">
-    <h3>Gestión de Operaciones Financieras</h3>
-    <p>Este automatismo tiene como objetivo optimizar el proceso de monitoreo y registro de operaciones de compra y venta de acciones, utilizando las notificaciones enviadas por los bancos a través de su servicio de correo electrónico (Outlook). El flujo de trabajo del automatismo está diseñado para operar de manera autónoma, realizar cálculos de rendimiento financiero y cumplir con las normativas de reporte de la CNMV (Comisión Nacional del Mercado de Valores). A continuación, se describe el funcionamiento detallado del proceso:</p>
-    
-    <h4>1. Lectura Diaria del Buzón de Outlook</h4>
-    <p>Todos los días, el programa accede al buzón de Outlook en busca de correos electrónicos que provengan de los bancos. Estos correos contienen las confirmaciones de operaciones realizadas sobre la compra y venta de acciones. Las notificaciones pueden llegar en distintos formatos:</p>
-    <ul>
-        <li><strong>PDF</strong></li>
-        <li><strong>Excel</strong></li>
-        <li><strong>Cuerpo del correo electrónico</strong></li>
-    </ul>
+    <h3>Financial Operations Management</h3>
+<p>This automation aims to optimize the monitoring and recording process of stock purchase and sale transactions by utilizing notifications sent by banks via their email service (Outlook). The automation workflow is designed to operate autonomously, perform financial performance calculations, and comply with the reporting regulations of the CNMV (National Securities Market Commission). Below is a detailed description of the process:</p>
 
-    <h4>2. Extracción de Datos de las Notificaciones</h4>
-    <p>Cuando el programa encuentra un correo de un banco, se encarga de extraer los datos relevantes de la transacción, que pueden estar en uno de los tres formatos mencionados anteriormente (PDF, Excel o cuerpo del correo). Dependiendo del formato, el programa implementa diferentes técnicas de extracción de datos:</p>
-    <ul>
-        <li><strong>Para los <em>archivos PDF</em></strong>, el programa utiliza una combinación de un lector OCR (Reconocimiento Óptico de Caracteres) y expresiones regulares.para la extracción precisa de los datos.</li>
-        <li><strong>Para los <em>archivos Excel</em></strong>, el programa no depende de un formato fijo. En su lugar, aplica una lógica flexible para buscar celdas clave en cualquier parte del archivo. Esta flexibilidad asegura que el automatismo siga funcionando incluso si los bancos modifican sus plantillas de Excel.</li>
-        <li><strong>Para los datos en el <em>cuerpo del correo electrónico</em></strong>, el programa emplea técnicas de <strong>análisis de HTML</strong> para identificar y extraer las tablas de datos dentro del cuerpo del correo. Esto se realiza a través de un proceso de parseo que analiza la estructura jerárquica de las etiquetas HTML, localizando las tablas y extrayendo los valores de las celdas de manera precisa. También, se utilizan expresiones regulares para identificar patrones de texto específicos que puedan no estar en formato tabular, lo que permite una extracción más completa de la información, incluso cuando los datos están distribuidos de manera no estructurada.</li>
+<h4>1. Daily Reading of the Outlook Mailbox</h4>
+<p>Every day, the program accesses the Outlook mailbox to search for emails from banks. These emails contain confirmations of stock purchase and sale transactions. The notifications can arrive in different formats:</p>
+<ul>
+    <li><strong>PDF</strong></li>
+    <li><strong>Excel</strong></li>
+    <li><strong>Email body</strong></li>
+</ul>
 
-    </ul>
+<h4>2. Data Extraction from Notifications</h4>
+<p>When the program detects an email from a bank, it extracts the relevant transaction data, which may be in one of the three formats mentioned above (PDF, Excel, or email body). Depending on the format, the program implements different data extraction techniques:</p>
+<ul>
+    <li><strong>For <em>PDF files</em></strong>, the program uses a combination of OCR (Optical Character Recognition) and regular expressions for accurate data extraction.</li>
+    <li><strong>For <em>Excel files</em></strong>, the program does not rely on a fixed format. Instead, it applies a flexible logic to search for key cells anywhere in the file. This flexibility ensures that the automation continues to function even if banks modify their Excel templates.</li>
+    <li><strong>For data in the <em>email body</em></strong>, the program employs <strong>HTML analysis</strong> techniques to identify and extract data tables within the email. This is done through a parsing process that analyzes the hierarchical structure of HTML tags, locates the tables, and extracts the cell values accurately. Additionally, regular expressions are used to identify specific text patterns that may not be in tabular format, enabling more comprehensive data extraction even when the information is unstructured.</li>
+</ul>
 
-    <h4>3. Carga de los Datos en un Excel de Registro</h4>
-    <p>Una vez que el programa ha extraído los datos de la operación, los registra en un archivo Excel. Este archivo actúa como el registro central de todas las transacciones realizadas, y el programa organiza los datos en columnas correspondientes, tales como:</p>
-    <ul>
-        <li>Fecha de la operación</li>
-        <li>Banco</li>
-        <li>Tipo de operación (compra/venta)</li>
-        <li>Número de acciones</li>
-        <li>Precio de la acción</li>
-        <li>Total de la operación</li>
-        <li>Otros detalles relevantes</li>
-    </ul>
+<h4>3. Data Entry into a Record Excel File</h4>
+<p>Once the program extracts the transaction data, it records them in an Excel file. This file serves as the central log of all completed transactions, organizing the data into relevant columns, such as:</p>
+<ul>
+    <li>Transaction date</li>
+    <li>Bank</li>
+    <li>Transaction type (buy/sell)</li>
+    <li>Number of shares</li>
+    <li>Share price</li>
+    <li>Total transaction value</li>
+    <li>Other relevant details</li>
+</ul>
 
-    <h4>4. Cálculos Financieros Automáticos</h4>
-    <p>El programa realiza una serie de cálculos sobre los datos extraídos y registrados:</p>
-    <ul>
-        <li><strong>Cartera Actual Post Operaciones</strong>: Calcula el valor de la cartera después de cada operación, actualizando el número de acciones y el valor total.</li>
-        <li><strong>Rendimiento Obtenido</strong>: Calcula el rendimiento generado por las operaciones, comparando el precio de compra y venta de las acciones.</li>
-        <li><strong>% de Capital Social en Autocartera</strong>: Calcula el porcentaje de acciones que la empresa tiene en autocartera, con respecto al total de acciones en circulación.</li>
-    </ul>
+<h4>4. Automated Financial Calculations</h4>
+<p>The program performs a series of calculations on the extracted and recorded data:</p>
+<ul>
+    <li><strong>Current Portfolio After Transactions</strong>: Calculates the portfolio value after each transaction, updating the number of shares and total value.</li>
+    <li><strong>Yield Achieved</strong>: Determines the return generated by the transactions by comparing the purchase and sale prices of the shares.</li>
+    <li><strong>% of Share Capital in Treasury Stock</strong>: Calculates the percentage of shares held as treasury stock in relation to the total outstanding shares.</li>
+</ul>
 
-    <h4>5. Generación del XML para Reporte a la CNMV</h4>
-    <p>Si el <strong>% de capital social en autocartera</strong> excede un umbral predefinido, el programa genera automáticamente un archivo <strong>XML</strong> que contiene un histórico de todas las operaciones realizadas desde la última vez que se generó el XML. Este archivo XML tiene un formato estandarizado y contiene la información necesaria para cumplir con los requisitos de la CNMV.</p>
+<h4>5. XML Generation for CNMV Reporting</h4>
+<p>If the <strong>% of share capital in treasury stock</strong> exceeds a predefined threshold, the program automatically generates an <strong>XML file</strong> containing a history of all transactions performed since the last XML file was generated. This XML file follows a standardized format and includes the necessary information to comply with CNMV requirements.</p>
 
-    <h4>6. Carga del XML en la Web de la CNMV</h4>
-    <p>Una vez generado el XML, el automatismo accede a la página web de la CNMV e ingresa a la sección correspondiente para cargar el archivo XML. El proceso se realiza de manera automática, sin intervención manual, asegurando que el reporte sea presentado dentro de los plazos establecidos.</p>
+<h4>6. XML Upload to the CNMV Website</h4>
+<p>Once the XML is generated, the automation accesses the CNMV website and logs into the appropriate section to upload the XML file. The process is carried out automatically without manual intervention, ensuring that the report is submitted within the required deadlines.</p>
 
-    <h4>Beneficios del Automatismo</h4>
-    <ul>
-        <li><strong>Eficiencia</strong>: El programa ejecuta el proceso de forma automática todos los días, eliminando la necesidad de intervención manual.</li>
-        <li><strong>Precisión</strong>: La extracción de datos y los cálculos financieros se realizan de manera precisa, sin riesgo de error humano.</li>
-        <li><strong>Cumplimiento Normativo</strong>: El automatismo asegura que las operaciones se reporten correctamente a la CNMV en los plazos establecidos, cumpliendo con las normativas vigentes.</li>
-        <li><strong>Ahorro de Tiempo</strong>: Al automatizar este proceso, se ahorran cientos de horas de trabajo manual, permitiendo que los analistas financieros se concentren en tareas más estratégicas.</li>
-    </ul>
+<h4>Benefits of Automation</h4>
+<ul>
+    <li><strong>Efficiency</strong>: The program executes the process automatically every day, eliminating the need for manual intervention.</li>
+    <li><strong>Accuracy</strong>: Data extraction and financial calculations are performed precisely, minimizing human error.</li>
+    <li><strong>Regulatory Compliance</strong>: The automation ensures that transactions are correctly reported to the CNMV within the established deadlines, meeting regulatory requirements.</li>
+    <li><strong>Time Savings</strong>: Automating this process saves hundreds of hours of manual work, allowing financial analysts to focus on more strategic tasks.</li>
+</ul>
+
 </section>
 
 
 
 <!-- Detalles de otros proyectos (ejemplo para Proyecto 2 y Proyecto 3) -->
 <section id="proceso-calypso">
-    <h3>Control de Tipos Calypso-Refinitiv</h3>
-    <p>Este automatismo tiene como objetivo garantizar que la base de datos en el sistema Calypso cuente siempre con la información de mercado actualizada, especialmente en lo que respecta a los tipos de cambio e interés. Al automatizar este proceso, se asegura que los datos cruciales para la toma de decisiones financieras estén siempre al día, reduciendo el riesgo de utilizar información desactualizada y mejorando la eficiencia operativa en la empresa. A continuación, se describe el flujo de trabajo detallado del automatismo:</p>
+    <h3>Calypso-Refinitiv Rate Control</h3>
+    <p>This automation aims to ensure that the database in the Calypso system always contains up-to-date market information, particularly regarding exchange and interest rates. By automating this process, it guarantees that crucial data for financial decision-making is always current, reducing the risk of using outdated information and improving operational efficiency within the company. Below is a detailed workflow of the automation:</p>
 
-    <h4>1. Ingreso a Calypso y Revisión de Tipos de Cambio e Interés</h4>
-    <p>El proceso comienza con el acceso al sistema Calypso, donde se revisan los tipos de cambio y de interés registrados. Si se encuentra algún dato con una fecha anterior al último día hábil, se agrega automáticamente a una lista de actualización, lo que garantiza que los valores estén siempre al día para las operaciones.</p>
+<h4>1. Accessing Calypso and Reviewing Exchange and Interest Rates</h4>
+<p>The process begins with accessing the Calypso system to review the registered exchange and interest rates. If any data is found with a date prior to the last business day, it is automatically added to an update list, ensuring that values remain up-to-date for operations.</p>
 
-    <h4>2. Ingreso a Refinitiv</h4>
-    <p>El automatismo luego ingresa la plataforma Datascope de Refinitiv utilizando las credenciales correspondientes. Para garantizar la seguridad de la información, las credenciales de acceso no están almacenadas en el código fuente del programa, sino que están encriptadas en un entorno seguro.</p>
-    
-    <h4>3. Búsqueda de Tipos de Cambio en Refinitiv</h4>
-    <p>Con la información de tipos faltantes en Calypso, el automatismo realiza una búsqueda eficiente en Refinitiv para obtener los valores más actualizados. Este proceso se hace de manera ágil y autónoma, asegurando que no se pierda tiempo valioso en la recopilación de datos.</p>
+<h4>2. Logging into Refinitiv</h4>
+<p>The automation then accesses Refinitiv’s Datascope platform using the corresponding credentials. To ensure data security, access credentials are not stored in the program’s source code but are encrypted within a secure environment.</p>
 
-    <h4>4. Creación de Archivos XML</h4>
-    <p>Una vez que Refinitiv proporciona los datos necesarios, el programa genera automáticamente archivos <strong>XML</strong> con la información de los tipos de cambio e interés. Estos archivos están listos para ser cargados, sin necesidad de intervención manual.</p>
+<h4>3. Retrieving Exchange Rates from Refinitiv</h4>
+<p>With the missing data identified in Calypso, the automation performs an efficient search in Refinitiv to obtain the most up-to-date values. This process is carried out swiftly and autonomously, ensuring no valuable time is wasted on data collection.</p>
 
-    <h4>5. Carga Automática de los Archivos XML en MFT</h4>
-    <p>Los archivos XML generados se cargan de manera automática utilizando la plataforma de MFT (Managed File Transfer) utilizando técnicas robustas de <strong>web scraping</strong> para interactuar con las interfaces web de la plataforma del MFT, garantizando que los archivos se carguen correctamente y de manera confiable, sin intervención manual.</p>
+<h4>4. Generating XML Files</h4>
+<p>Once Refinitiv provides the necessary data, the program automatically generates <strong>XML</strong> files containing the exchange and interest rate information. These files are ready for upload without requiring manual intervention.</p>
 
-    <h4>6. Recuperación de los Archivos XML desde Alveo</h4>
-    <p>Una vez enviados los XML desde el MFT, el sistema ingresa al sistema Alveo y busca los archivos XML en la ruta específica donde el MFT los ha dejado para realizar la carga de los datos presentes en esos archivos XML, asegurándose de que toda la información esté disponible para la siguiente fase del proceso.</p>
+<h4>5. Automatic Upload of XML Files to MFT</h4>
+<p>The generated XML files are automatically uploaded using the Managed File Transfer (MFT) platform, employing robust <strong>web scraping</strong> techniques to interact with the MFT web interfaces. This ensures reliable and accurate file uploads without manual intervention.</p>
 
-    <h4>7. Lanzamiento de los Datos a Calypso</h4>
-    <p>Con los datos cargados en Alveo, el automatismo realiza el lanzamiento de la información de Alveo a Calypso, actualizando los tipos de cambio e interés de forma completamente automática.</p>
+<h4>6. Retrieving XML Files from Alveo</h4>
+<p>After the XML files are sent via MFT, the system accesses Alveo to locate them in the designated path where MFT stored them. It then loads the data from these XML files, ensuring all necessary information is available for the next phase of the process.</p>
 
-    <h4>8. Revisión Final en Calypso</h4>
-    <p>Finalmente, el proceso revisa en Calypso si los datos han sido correctamente actualizados. Esto asegura que no haya discrepancias y que los sistemas siempre estén listos para las operaciones, con datos precisos y actualizados.</p>
+<h4>7. Transferring Data to Calypso</h4>
+<p>With the data successfully loaded into Alveo, the automation transfers the information from Alveo to Calypso, updating exchange and interest rates in a fully automated manner.</p>
 
-    <h4>Beneficios del Automatismo</h4>
-    <p>Este proceso no solo asegura la precisión de los datos, sino que también ofrece una serie de beneficios adicionales para la empresa:</p>
-    <ul>
-        <li><strong>Eficiencia Operativa:</strong> La automatización de este proceso elimina la intervención manual y los posibles errores asociados, asegurando que las actualizaciones se realicen de manera precisa y en tiempo real.</li>
-        <li><strong>Reducción de Costos:</strong> Al eliminar las tareas manuales, el automatismo optimiza el uso de recursos, lo que lleva a un ahorro significativo en tiempo y esfuerzo. Las horas invertidas en tareas repetitivas y propensas a errores son ahora aprovechadas en actividades de mayor valor.</li>
-        <li><strong>Cumplimiento Regulatorio:</strong> El proceso asegura que todos los tipos de cambio e interés estén siempre actualizados y en línea con las normativas internas y regulatorias, reduciendo el riesgo de sanciones o errores en el reporte.</li>
-        <li><strong>Ahorro de Tiempo:</strong> Al automatizar tareas que antes requerían de intervención manual, el proceso se vuelve mucho más ágil, permitiendo que los equipos financieros se centren en tareas más estratégicas y de análisis de valor agregado.</li>
-        <li><strong>Escalabilidad:</strong> El automatismo está diseñado para adaptarse a futuras necesidades de actualización de datos, lo que permite escalar sin problemas en función de los requerimientos del negocio.</li>
-    </ul>
+<h4>8. Final Review in Calypso</h4>
+<p>Finally, the process verifies in Calypso that the data has been correctly updated. This ensures there are no discrepancies and that systems remain ready for operations with accurate and up-to-date information.</p>
 
-    <p>Con este sistema automatizado, se garantiza que la actualización de tipos de cambio e interés sea rápida, precisa y sin intervención manual, permitiendo a la empresa mantenerse competitiva y alineada con los estándares más exigentes.</p>
+<h4>Benefits of Automation</h4>
+<p>This process not only ensures data accuracy but also provides several additional benefits for the company:</p>
+<ul>
+    <li><strong>Operational Efficiency:</strong> Automating this process eliminates manual intervention and associated errors, ensuring updates are performed accurately and in real time.</li>
+    <li><strong>Cost Reduction:</strong> By removing manual tasks, the automation optimizes resource utilization, leading to significant savings in time and effort. Hours spent on repetitive, error-prone tasks can now be allocated to higher-value activities.</li>
+    <li><strong>Regulatory Compliance:</strong> The process ensures that all exchange and interest rates are always up-to-date and aligned with internal and regulatory requirements, reducing the risk of penalties or reporting errors.</li>
+    <li><strong>Time Savings:</strong> By automating tasks that previously required manual intervention, the process becomes much more efficient, allowing financial teams to focus on strategic tasks and value-added analysis.</li>
+    <li><strong>Scalability:</strong> The automation is designed to adapt to future data update needs, allowing seamless scaling according to business requirements.</li>
+</ul>
+
+<p>With this automated system, the updating of exchange and interest rates is fast, accurate, and requires no manual intervention, enabling the company to remain competitive and aligned with the highest industry standards.</p>
+
 </section>
 
 
